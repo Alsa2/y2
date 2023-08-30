@@ -52,5 +52,13 @@ def test_mac_manager():
     # test if invalid mac address is added to table
     mac_manager.add_mac("00:00:00:00:00:0g")
     assert mac_manager.get_ip("00:00:00:00:00:0g") == "invalid mac address"
+
+if __name__ == "__main__":
+    wifi = MacManager()
+    wifi.add_mac("00:00:00:00:00:00")
+    print(wifi.get_ip("00:00:00:00:00:00"))
+    wifi.add_mac("00:00:00:00:00:01")
+    print(wifi.get_ip("00:00:00:00:00:01"))
+
     
     
