@@ -59,6 +59,3 @@ if __name__ == "__main__":
     print(wifi.get_ip("00:00:00:00:00:00"))
     wifi.add_mac("00:00:00:00:00:01")
     print(wifi.get_ip("00:00:00:00:00:01"))
-
-    
-    
