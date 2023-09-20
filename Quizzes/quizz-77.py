@@ -17,3 +17,10 @@ class Packet_corrector:
         else:
             print("Error in data: ", data)
             return False
+        
+    def correct(self):
+        # return the correct data only
+        output = ""
+        for i in self.data:
+            if self.parity_check(i):
+                return i[1:]
