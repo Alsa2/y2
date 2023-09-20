@@ -16,8 +16,9 @@ class my_collections:
     
     def getNext(self):
         if self.hasNext():
+            temp = self.data[self.location]
             self.location += 1
-            return self.data[self.location]
+            return temp
         else:
             raise Exception("No more items in collection")
 
