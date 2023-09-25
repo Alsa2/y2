@@ -16,11 +16,25 @@ class collections:
     
     def getNext(self):
         if self.hasNext():
+            temp = self.data[self.location]
             self.location += 1
-            return self.data[self.location]
+            return temp
         else:
             raise Exception("No more items in collection")
     
+
+class queue():
+    def __init__(self) -> None:
+        self.data = []
+        pass
+    def enqueue(self, item):
+        self.data.append(item)
+        pass
+    def dequeue(self):
+        item = self.data[0]
+        self.data = self.data[1:]
+        return item
+
 if __name__ == "__main__":
     c = collections()
     c.addItem(1)
